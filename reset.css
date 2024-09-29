@@ -89,11 +89,11 @@ ol {
 /* ============================================ */
 
 dt {
-  /* font-weight: bold; */
+  font-weight: bold;
 }
 
 dd {
-  /* margin-left: 0; */
+  margin-left: 0;
 }
 
 /* Grouping content */
