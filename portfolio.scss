@@ -1,6 +1,19 @@
 @charset 'utf-8';
+$basecolor:#fbfbfb;
+$maincolor:#558A86;
+$accentcolor:#0F0A01;
 
+
+// header
 .header {
     height: 110px;
-    background-color: #558A86;
+    background-color: $maincolor;
+    display: flex;
+    justify-content: space-between;
+    color: $basecolor;
+}
+
+.navigation__item{
+    display: flex;
+    gap: 16px;
 }
