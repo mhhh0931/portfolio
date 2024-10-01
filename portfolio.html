@@ -7,8 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Portfolio.html">
     <link rel="stylesheet" href="reset.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="../html/css/portfolio.css">
-    <link rel="icon" href=""></head>
+</head>
 <body>
     <header class="header">
         <div class="header__content">
@@ -37,15 +41,41 @@
     </header>
     <main>
         <section class="mainvisual">
-            <img src="img\mainvisual.png" alt="">
             <div class="mainvisual__item">
-                <h2 class="mainvisual__text">hm.code</h2>
-                <p>Portfolio-site</p>
+                <img src="img\mainvisual.png" alt="">
+                <div class="mainvisual__text">
+                    <h2 class="mainvisual__title">hm.code</h2>
+                    <p class="mainvisual__p">Portfolio-site</p>
+                </div>
             </div>
+        </section> 
+
+        <section class="works">
+            <img src="img\mouse_24dp_5F6368_FILL0_wght400_GRAD0_opsz24 1.png" alt="">
+            <h2 class="works__title">Works</h2>
+            <p class="works__subtitle">-実績-</p>
+
+            <div class="swiper">
+                <div class="swiper-wapper">
+                    <div class="swiper-slide slide1">Slide 1</div>
+                    <div class="swiper-slide slide2">Slide 2</div>
+                    <div class="swiper-slide Slide3">Slide 3</div>
+                 </div>
+                 <div class="swiper-pagination"></div>
+
+                 <!-- If we need navigation buttons -->
+                 <div class="swiper-button-prev"></div>
+                 <div class="swiper-button-next"></div>
+               
+                 <!-- If we need scrollbar -->
+                 <div class="swiper-scrollbar"></div>
+              </div>
+           </div>
         </section>
 
         
     </main>
-    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="portfolio.js"></script>
 </body>
 </html>
