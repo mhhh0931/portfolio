@@ -75,6 +75,7 @@ $breakPoint: (
 }
 
 // works
+
 .works{
     margin: 120px;
     text-align: center;
@@ -139,3 +140,49 @@ $breakPoint: (
   .next::before {
     background-image: url(img\right.png);
   }
+
+  .works__button {
+    margin-top: 56px;
+    display: inline-block;
+    border: 3px solid $maincolor;
+    color: $accentcolor;
+    padding: 16px 60px;
+    letter-spacing: 3px;
+}
+
+// Service
+
+.service{
+    margin: 120px;
+    text-align: center;
+}
+
+.service__title {
+    font-size: 32px;
+    font-weight: bold;
+    color: $accentcolor;
+}
+
+.service__subtitle {
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 40px;
+}
+
+.service__list {
+    display: flex;
+    gap: 28px;
+}
+
+.service__item {
+    border: 1px solid $maincolor;
+    padding: 40px;
+    width: 33%;
+}
+
+.service__item--title {
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: $accentcolor;
+}
