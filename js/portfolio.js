@@ -1,11 +1,10 @@
-const swiper = new Swiper(".swiper", {
-    // ページネーションを追加
-    pagination: {
-      el: ".swiper-pagination"
-    },
-    // ナビゲーションボタンを追加
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    }
-  });
+new Splide(".splide",{
+  type:"loop",
+  perPage:3,
+  gap:48,
+  pagenation:true,
+  autoHeight:true,
+  speed: 1000, 
+  focus  : "center",
+  updateOnMove: true, 
+}).mount();

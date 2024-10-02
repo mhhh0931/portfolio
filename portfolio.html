@@ -7,11 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Portfolio.html">
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <link rel="stylesheet" href="../html/css/portfolio.css">
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
 </head>
 <body>
     <header class="header">
@@ -55,27 +52,49 @@
             <h2 class="works__title">Works</h2>
             <p class="works__subtitle">-実績-</p>
 
-            <div class="swiper">
-                <div class="swiper-wapper">
-                    <div class="swiper-slide slide1">Slide 1</div>
-                    <div class="swiper-slide slide2">Slide 2</div>
-                    <div class="swiper-slide Slide3">Slide 3</div>
-                 </div>
-                 <div class="swiper-pagination"></div>
+            
+            <div class="splide" aria-label="Splideの基本的なHTML">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                        <a href="">
+                            <img src="img\image 41.png" alt="">
+                            <p class="splide__title">FA EXHIBITION</p>
+                        </a>
+                     </li>
+                    <li class="splide__slide">
+                        <a href="">
+                            <a href="">
+                                
+                                <img src="img\image 37.png" alt="">
+                            </a>
+                        </a>
+                    </li>
+                    <li class="splide__slide">
+                        <a href="">
 
-                 <!-- If we need navigation buttons -->
-                 <div class="swiper-button-prev"></div>
-                 <div class="swiper-button-next"></div>
-               
-                 <!-- If we need scrollbar -->
-                 <div class="swiper-scrollbar"></div>
-              </div>
-           </div>
+                            <img src="img\image 39.png" alt="">
+                        </a>
+                    </li>
+                    <li class="splide__slide">
+                        <a href="">
+
+                            <img src="img\スクリーンショット (72) 1.png" alt="">
+                        </a>
+                    </li>
+                  </ul>
+                  <ul class="splide__pagination"></ul>
+                  <div class="splide__arrows">
+                    <button class="splide__arrow splide__arrow--prev button prev"></button>
+                    <button class="splide__arrow splide__arrow--next button next"></button>
+                  </div> 
+                </div>
+              </section>
         </section>
 
         
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="portfolio.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="js\portfolio.js"></script>
 </body>
 </html>

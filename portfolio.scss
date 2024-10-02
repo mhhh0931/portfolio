@@ -89,32 +89,53 @@ $breakPoint: (
 .works__subtitle {
     font-size: 16px;
     line-height: 2;
+    margin-bottom: 40px;
 }
 
-.swiper {
-    width: 100%;
-    height: 300px;
-  }
-  
-  
-  .swiper-slide {
-    width: 100%;
+.splide__slide img {
     height: 100%;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
+    width: 100%;
+    opacity: .3;
+    transform: scale(.8);
+    transition: .7s;
   }
-  
-  .slide1 {
-    background-color: #a3cce0;
+
+  .splide__slide.is-active img {
+    opacity: 1;
+    transform: scale(1); /* 中央のスライドは小さくしない */
+    z-index: 1;
   }
-  
-  .slide2 {
-    background-color: #a4da1c;
+  .splide__pagination {
+    bottom: auto;
+    position: absolute;
+    top: 1em;
   }
-  
-  .slide3 {
-    background-color: #cb4651;
+
+  .button {
+    background-color: transparent; /* ボタンの背景を透明にする */
+    height: 50px;
+    transition: .2s;
+    width: 30px;
+  }
+
+  .button::before {
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 0;
+    content: "";
+    height: 50px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    width: 50px;
+  }
+
+  /* 前の矢印 */
+.prev::before {
+    background-image: url(img\left.png);
+  }
+  /* 次の矢印 */
+  .next::before {
+    background-image: url(img\right.png);
   }
