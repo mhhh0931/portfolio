@@ -18,12 +18,12 @@
                 Hm.code
             </h1>
             <nav class="navigation">
-                <ul class="navigation__item">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Works</a></li>
-                    <li><a href="#">Service</a></li>
-                    <li><a href="#">Price</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul class="navigation__list">
+                    <li  class="navigation__item"><a href="#">Home</a></li>
+                    <li  class="navigation__item"><a href="#works">Works</a></li>
+                    <li  class="navigation__item"><a href="#service">Service</a></li>
+                    <li  class="navigation__item"><a href="#">Price</a></li>
+                    <li  class="navigation__item"><a href="#contact">Contact</a></li>
                     <li><a href="#"><img src="img\icons8-インスタグラム-48 (2) 1.png" alt=""></a></li>
                     <li><a href="#"><img src="img\icons8-github-24.png" alt=""></a></li>
                 </ul>
@@ -47,13 +47,14 @@
             </div>
         </section> 
 
-        <section class="works">
+        <section id="works">
             <img src="img\mouse_24dp_5F6368_FILL0_wght400_GRAD0_opsz24 1.png" alt="">
             <h2 class="works__title">Works</h2>
             <p class="works__subtitle">-実績-</p>
 
             
             <div class="splide" aria-label="Splideの基本的なHTML">
+
                 <div class="splide__track">
                   <ul class="splide__list">
                     <li class="splide__slide">
@@ -83,16 +84,13 @@
                         </a>
                     </li>
                   </ul>
-                  <ul class="splide__pagination"></ul>
-                  <div class="splide__arrows">
-                    <button class="splide__arrow splide__arrow--prev button prev"></button>
-                    <button class="splide__arrow splide__arrow--next button next"></button>
-                  </div> 
+                </div>
+                <ul class="splide__pagination"></ul>
                 </div>
                 <button class="works__button">View More</button>
               </section>
         
-              <section class="service">
+              <section id="service">
                 　　<img src="img\デスクワークのフリー素材5.png" alt="">
                     <h2 class="service__title">Service</h2>
                     <p class="service__subtitle">-できること-</p>
@@ -103,26 +101,62 @@
                             <img src="img\21367.png" alt="">
                             <p class="service__item--text">Wordpressによるオリジナルテーマや既存テーマを用いてコーポレートサイト、ランディングページの制作を行います。お客様からヒアリングした情報を元に目的に沿ったWebサイト制作を心がけます。</p>
                         </div>
-                        <div class="service__item">
+                        <div class="service__item fade1">
                             <h3 class="service__item--title">コーディング</h3>
-                            <img src="\img\17567 1.png" alt="">
+                            <img src="img\17567 1.png" alt="">
                             <p class="service__item--text">ご用意いただいたデザインを確認しながら、コーディングを行います。
                                 また、お客様がスムーズに利用できる設計や、仕様になるようなWebサイト作りを行います。
                                 </p>
                         </div>
-                        <div class="service__item">
+                        <div class="service__item fade2">
                             <h3 class="service__item--title">Webデザイン</h3>
                             <img src="img\17623 1.png" alt="">
                             <p class="service__item--text">お客様よりヒアリングした内容に合わせ、Webサイトの目的、意図に沿ったデザインを作成します。
                                 また視認性や、ユーザビリティを意識したデザインを提案します。
                                 </p>
                         </div>
-
                     </div>
+                    <button class="service__button">View More</button>
+                </section>
 
+                <section id="about">
+                    <img src="img\横顔アイコン 1.png" alt="">
+                    <h2 class="about__title">About</h2>
+                    <p class="about__subtitle">-私について-</p>
 
+                    <div class="about__list">
+                        <div class="about__item">
+                            <img src="img\xAfAcoSOFv87ODc1727616888_1727616895.png" alt="">
+                        </div>
+                        <div class="about__item">
+                            <h3 class="about__name">
+                                <span class="about__color">H</span>itomi<span class="about__color"> M</span>urakami
+                            </h3>
+                            <p class="about__text">
+                                看護師として病院から施設まで、様々な場所と環境で経験を積みました。人との関わりや寄り添う気持ちを大切に仕事を行ってきました。
+                            </p>
+                            <p class="about__text">
+                                医療現場で培った経験を活かし、お客様の課題に寄り添い、目標達成できるサイト作りを心がけています。
+                            </p>
+                        </div>
+                    </div>
+                </section>
 
-              </section>
+                <section id="contact">
+                    <img src="img\メールの無料アイコンその21 1.png" alt="">
+                    <h2 class="contact__title">Contact</h2>
+                    <p class="contact__subtitle">-お問い合わせ-</p>
+                    <div class="contact__text">
+                        <p>制作・デザインに関するお見積りやご相談事など<br>お気軽にお問い合わせください。</p>
+                        <p>2営業日以内にご返信いたします。</p>
+                    </div>
+                    <button class="contact__button">Contact</button>
+
+                </section>
+
+                <footer class="footer">
+                    <h2 class="footer__copyright">&copy;Hm code</h2>
+                </footer>
 
         
     </main>

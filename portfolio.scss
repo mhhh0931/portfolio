@@ -13,8 +13,15 @@ $breakPoint: (
   }
 }
 
+ 
+html{
+    font-family: Arial,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',Meiryo,'メイリオ','MS Pゴシック',sans-serif;
+    font-size: 100%;
+    height: 100%;
+}
 
 // header
+
 .header {
     height: 80px;
     background-color: $maincolor;
@@ -37,11 +44,34 @@ $breakPoint: (
     font-weight: bold;
 }
 
-.navigation__item{
+.navigation__list{
     display: flex;
     gap: 24px;
     line-height: 24px;
 }
+
+.navigation__item{
+    position: relative;
+    display: inline-block;
+}
+
+.navigation__item::after{
+        position: absolute;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: $basecolor;
+        bottom: -2px;               /*アンダーラインがaタグの下端から現れる*/
+        transform: scale(0, 1);     /*アンダーラインの縮尺比率。ホバー前はx方向に0*/
+        transform-origin: left top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の左端*/
+        transition: transform 0.3s; /*変形の時間*/
+        }
+        
+.navigation__item:hover::after {
+    transform: scale(1, 1);     /*ホバー後、x軸方向に1（相対値）伸長*/
+    }
+
 
 
 
@@ -76,9 +106,11 @@ $breakPoint: (
 
 // works
 
-.works{
-    margin: 120px;
+#works{
     text-align: center;
+    max-width: 1080px;
+    margin: auto;
+    padding-top: 120px;
 }
 
 .works__title {
@@ -109,37 +141,38 @@ $breakPoint: (
   .splide__pagination {
     bottom: auto;
     position: absolute;
-    top: 1em;
+    
   }
 
-  .button {
-    background-color: transparent; /* ボタンの背景を透明にする */
-    height: 50px;
-    transition: .2s;
-    width: 30px;
+  .splide__arrow{
+    background: $maincolor;
   }
 
-  .button::before {
-    background-repeat: no-repeat;
-    background-size: contain;
-    bottom: 0;
-    content: "";
-    height: 50px;
-    left: 0;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    width: 50px;
+  
+  .splide__pagination__page.is-active{
+    color: $maincolor;
   }
 
-  /* 前の矢印 */
-.prev::before {
-    background-image: url(img\left.png);
+  .your-class-page {
+    background-color: $maincolor;
+    opacity: .5;
+    height: 8px;
+    transition: .5s all;
+    width: 8px;
   }
-  /* 次の矢印 */
-  .next::before {
-    background-image: url(img\right.png);
+  /* 現在表示されているページネーションのスタイル */
+  .your-class-page.is-active {
+    background-color:$maincolor;
+    opacity: 1;
   }
+
+  /* ページネーション間の余白 */
+  .your-class-pagination li {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+
 
   .works__button {
     margin-top: 56px;
@@ -150,11 +183,19 @@ $breakPoint: (
     letter-spacing: 3px;
 }
 
+.works__button:hover{
+    background-color: $maincolor;
+    color: $basecolor;
+    transition: 0.7s;
+}
+
 // Service
 
-.service{
-    margin: 120px;
+#service{
     text-align: center;
+    max-width: 1080px;
+    margin: auto;
+    padding-top:120px;
 }
 
 .service__title {
@@ -178,11 +219,172 @@ $breakPoint: (
     border: 1px solid $maincolor;
     padding: 40px;
     width: 33%;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
 }
 
+  
+  /* 時間差フェードで付与するクラス */
+  .service__item.fade1{
+    transition-delay: .5s;
+  }
+  
+  .service__item.fade2{
+    transition-delay: 1s;
+  }
+  
+  /* フェードしたい要素に付与するクラス */
+  .scrolled {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+
 .service__item--title {
-    margin-bottom: 8px;
+    margin-bottom: 24px;
     font-size: 20px;
     font-weight: bold;
     color: $accentcolor;
+}
+
+.service__item--text {
+    margin-top: 24px;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.service__button {
+    margin-top: 56px;
+    display: inline-block;
+    border: 3px solid $maincolor;
+    color: $accentcolor;
+    padding: 16px 60px;
+    letter-spacing: 3px;
+}
+
+.service__button:hover{
+    background-color: $maincolor;
+    color: $basecolor;
+    transition: 0.7s;
+}
+
+// About
+
+#about{
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    padding-top:120px;
+}
+
+.about__title {
+    font-size: 32px;
+    font-weight: bold;
+    color: $accentcolor;
+}
+
+.about__subtitle {
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 40px;
+}
+
+.about__list {
+    display: flex;
+    gap: 40px;
+    background-color:rgba(85,138,134,0.1);
+    padding: 40px;
+    border: 1px solid $maincolor;
+    align-items: center;
+}
+
+
+.about__item img {
+    width: 250px;
+    height: 250px;
+    border-radius: 500px;
+}
+
+.about__color{
+    color: $maincolor;
+}
+
+.about__item:nth-child(1){
+    width: 80%;
+}
+
+.about__name {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+}
+
+.about__text {
+    font-size: 16px;
+    text-align: left;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+// contact
+
+#contact{
+    text-align: center;
+    max-width: 680px;
+    margin: auto;
+    padding-top:120px;
+}
+
+.contact__title {
+    font-size: 32px;
+    font-weight: bold;
+    color: $accentcolor;
+}
+
+.contact__subtitle {
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 40px;
+}
+
+.contact__text {
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+.contact__button {
+    margin-top: 56px;
+    display: inline-block;
+    border: 3px solid $maincolor;
+    color: $accentcolor;
+    padding: 16px 60px;
+    letter-spacing: 3px;
+}
+
+.contact__button:hover{
+    background-color: $maincolor;
+    color: $basecolor;
+    transition: 0.7s;
+}
+
+// footer
+.footer{
+    height: 40px;
+    background-color: $maincolor;
+    color: $basecolor;
+    width: 100%;
+    margin-top: 120px;
+    display: block;
+    align-content: center;
+}
+
+.footer__copyright{
+    font-size: 10px;
+    text-align: center;
 }
