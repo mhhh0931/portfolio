@@ -60,3 +60,17 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   });
 });
+
+// ハンバーガーメニュー
+  const hamburger = document.querySelector('.hamburger');
+  const span = document.querySelectorAll('.hamburger__item');
+  const nav = document.querySelector(".hamburger__navigation");
+
+
+  hamburger.addEventListener('click', function () {
+      hamburger.classList.toggle("open");
+      nav.classList.toggle("add");
+  });
+
+
+ 
