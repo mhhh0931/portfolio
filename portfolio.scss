@@ -5,7 +5,8 @@ $accentcolor:#0F0A01;
 
 $breakPoint: (
     sp: 'screen and (max-width: 600px)',
-  tab: 'screen and (max-width: 767px)'
+  tab: 'screen and (max-width: 767px)',
+  max:'screen and (max-width: 980px)'
 );
 // mixinを定義
 @mixin mediaQuery($bp) {
@@ -287,6 +288,10 @@ html{
     padding-top:120px;
 }
 
+.service__wapper{
+    margin: 0 50px;
+}
+
 .service__title {
     font-size: 32px;
     font-weight: bold;
@@ -302,6 +307,10 @@ html{
 .service__list {
     display: flex;
     gap: 28px;
+
+    @include mediaQuery(tab){
+        flex-direction: column;
+      }
 }
 
 .service__item {
@@ -311,6 +320,9 @@ html{
     opacity: 0;
     transform: translateY(50px);
     transition: 1s;
+    @include mediaQuery(tab){
+        width: 100%;
+      }
 }
 
   
@@ -509,6 +521,11 @@ html{
     justify-content: space-between;
     margin-top: 32px;
     margin-bottom: 48px;
+    @include mediaQuery(max){
+        margin: 0px 150px;
+        flex-direction: column;
+        margin-bottom: 40px;
+      }
 }
 
 .price__item--content--left {
@@ -517,6 +534,12 @@ html{
     position: relative;
     line-height: 1.5;
     letter-spacing: 0.8px;
+    @include mediaQuery(max){
+        width: 100%;
+        margin-top: 24px;
+        margin-bottom: 40px;
+        line-height: 1.6;
+      }
 }
 
 .price__item--content--left::after{
@@ -529,12 +552,36 @@ html{
     height: 100%;
     background-color: $maincolor;
 
+    @include mediaQuery(max){
+    display: none;
 }
+      }
+
 
 
 .price__item--content--right {
     width: 48%;
     margin: 0;
+    position: relative;
+    @include mediaQuery(max){
+        width: 100%;
+        margin-top: 16px;
+      }
+}
+
+.price__item--content--right::before{
+    @include mediaQuery(max){
+    position: absolute;
+    top: -130px;
+    left: 50%;
+    /* margin: 0 1rem; */
+    content: "";
+    width: 80%;
+    height: 100%;
+    /* background-color: #558A86; */
+    border-bottom: 5px solid $maincolor;
+    transform: translateX(-50%);
+}
 }
 
 .price__item--list {
@@ -577,6 +624,10 @@ html{
     visibility: hidden;
     transition: all 1s ease-out;
     transform: translateY(150px);
+    @include mediaQuery(tab){
+        flex-direction: column;
+
+}
 }
 
 .flow__list.is-active {
@@ -590,6 +641,11 @@ html{
 .flow__item--text {
     text-align: left;
     margin-left: 48px;
+    @include mediaQuery(tab){
+       text-align: center;
+       margin: 20px;
+
+}
 }
 
 .flow__item--title {
@@ -608,3 +664,185 @@ html{
     display: flex;
     justify-content: center;
 }
+
+// workslistページ
+#list{
+    text-align: center;
+    max-width: 1080px;
+    margin: auto;
+    padding-top: 120px;
+}
+
+.list__title {
+    font-size: 32px;
+    font-weight: bold;
+    color: $accentcolor;
+}
+
+.list__subtitle {
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 40px;
+}
+
+.list__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    }
+
+    .list__content--item:hover{
+        opacity: .8;
+        transition: all 0.3s;
+    }
+
+
+    .list__content--text {
+        margin-top: 8px;
+    }
+
+    .pic-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        box-sizing: border-box;
+        background-color: #fefefe;
+        gap: 1rem;
+    }
+    
+    .pagination {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        text-align: center;
+        padding-top: 16px;
+    }
+    
+    
+    .pagination a {
+        display: inline-block;
+        color: $accentcolor;
+        border-radius: 50%;
+        border: 1px solid #dedede;
+        text-decoration: none;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+    }
+    
+    
+    .pagination i {
+        line-height: 40px;
+    }
+    
+    .pagination .active a {
+        background-color: $maincolor;
+        color: $basecolor;
+    }
+    
+    .pagination a:hover {
+        background-color:rgba(85,138,134,0.3);
+        color: $basecolor;
+        transition: all .3s;
+    }
+    
+    .pagination .disabled a {
+        pointer-events: none;
+        color: #ccc;
+    }
+    
+    .pagination .disabled a:hover {
+        background-color: initial;
+        color: #ccc;
+    }
+
+    // Works詳細
+
+    #detail{
+        text-align: center;
+        max-width: 1080px;
+        margin: auto;
+        padding-top: 120px;
+    }
+    
+    .detail__title {
+        font-size: 32px;
+        font-weight: bold;
+        color: $accentcolor;
+    }
+    
+    .detail__subtitle {
+        font-size: 16px;
+        line-height: 2;
+        margin-bottom: 40px;
+    }
+
+    .detail__list {
+        display: flex;
+        gap: 16px;
+
+        @include mediaQuery(max){
+            flex-direction: column;
+            margin: 0px 50px;
+          }
+    }
+
+    .detail__img {
+        position: relative;
+    }
+
+    .detail__text {
+        position: absolute;
+        font-size: 10px;
+        top: 85%;
+        left: 50%;
+    }
+
+    .detail__content {
+        text-align: left;
+        padding-top: 56px;
+        @include mediaQuery(max){
+            margin: 0px 100px;
+          }
+    }
+
+    .detail__content--title {
+        font-size: 24px;
+        margin-bottom: 8px;
+        position: relative;
+    }
+
+    .detail__content--title::before{
+        position: absolute;
+        display: inline-block;
+        content: "";
+        width: 3px;
+        height: 25px;
+        background-color: $maincolor;
+        left: -10px;
+
+    }
+
+    .detail__content--text {
+        margin-bottom: 24px;
+    }
+
+    .detail__button {
+        margin-top: 56px;
+        display: inline-block;
+        border: 3px solid $maincolor;
+        color: $accentcolor;
+        padding: 16px 60px;
+        letter-spacing: 3px;
+    }
+    
+    .detail__button:hover{
+        background-color: $maincolor;
+        color: $basecolor;
+        transition: 0.7s;
+    }
