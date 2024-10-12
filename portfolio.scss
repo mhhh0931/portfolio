@@ -173,6 +173,7 @@ html{
 
 .mainvisual__item img{
     width: 100%;
+    margin-top: 80px;
 }
 
 .mainvisual__text{
@@ -419,9 +420,12 @@ html{
 
     @include mediaQuery(tab){
        flex-direction: column;
-       margin: 0px 20px;
+       padding: 40px 60px;
+        justify-content: center;
+        align-items: center;
+    }
       }
-}
+
 
 
 .about__item img {
@@ -530,7 +534,7 @@ html{
     text-align: center;
     max-width: 1080px;
     margin: auto;
-    padding-top: 120px;
+    padding-top: 200px;
 }
 
 .price__title {
@@ -556,7 +560,7 @@ html{
     margin-top: 32px;
     margin-bottom: 48px;
     @include mediaQuery(max){
-        margin: 0px 150px;
+        margin: 0px 50px;
         flex-direction: column;
         margin-bottom: 40px;
       }
@@ -650,7 +654,7 @@ html{
 }
 
 .flow__list {
-    margin: 0px 120px;
+    margin: 0px 50px;
     display: flex;
     align-items: center;
     margin-bottom: 56px;
@@ -704,7 +708,7 @@ html{
     text-align: center;
     max-width: 1080px;
     margin: auto;
-    padding-top: 120px;
+    padding-top: 200px;
 }
 
 .list__title {
@@ -725,6 +729,16 @@ html{
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 16px;
     grid-row-gap: 16px;
+
+    @include mediaQuery(tab){
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 0px;
+      }
+
+      @include mediaQuery(sp){
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 0px;
+      }
     }
 
     .list__content--item:hover{
@@ -801,7 +815,7 @@ html{
         text-align: center;
         max-width: 1080px;
         margin: auto;
-        padding-top: 120px;
+        padding-top: 200px;
     }
     
     .detail__title {
