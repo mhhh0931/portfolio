@@ -12,6 +12,12 @@ new Splide(".splide",{
     pagination: "splide__pagination your-class-pagination",
     page: "splide__pagination__page your-class-page",
   },
+
+  breakpoints: {
+    780: {
+      perPage: 1,
+    },
+  },
   
 }).mount();
 

@@ -216,18 +216,35 @@ html{
 }
 
 .splide__slide img {
-    height: 100%;
+    height: 80%;
     width: 100%;
     opacity: .3;
     transform: scale(.8);
     transition: .7s;
+    @include mediaQuery(tab){
+        width: 80%;
+        height: 80%;
+      }
   }
 
-  .splide__slide.is-active img {
+  .splide__slide p {
+    opacity: .3;
+    font-size: 10px;
+}
+
+  .splide__slide.is-active img{
     opacity: 1;
     transform: scale(1); /* 中央のスライドは小さくしない */
     z-index: 1;
   }
+
+  .splide__slide.is-active p{
+    font-size: 12px;
+    margin-top: 8px;
+    opacity: 1;
+  }
+
+
   .splide__pagination {
     bottom: auto;
     position: absolute;
@@ -399,6 +416,11 @@ html{
     padding: 40px;
     border: 1px solid $maincolor;
     align-items: center;
+
+    @include mediaQuery(tab){
+       flex-direction: column;
+       margin: 0px 20px;
+      }
 }
 
 
@@ -416,12 +438,21 @@ html{
     width: 80%;
 }
 
+.about__item{
+    @include mediaQuery(tab){
+        padding: 0px 50px;
+        }
+}
+
 .about__name {
     font-size: 40px;
     font-weight: bold;
     text-align: left;
     margin-bottom: 16px;
     letter-spacing: 2px;
+    @include mediaQuery(tab){
+       text-align: center;
+       }
 }
 
 .about__text {
@@ -430,6 +461,9 @@ html{
     letter-spacing: 1px;
     line-height: 1.5;
     margin-bottom: 16px;
+    @include mediaQuery(tab){
+        text-align: center;
+        }
 }
 
 // contact
