@@ -186,13 +186,20 @@ html{
     font-size: 40px;
     color: $maincolor;
     font-weight: bold;
-    padding: 30px 100px;
+    padding: 20px 80px;
     text-align: center;
     line-height: 1.5;
+    @include mediaQuery(tab){
+        font-size: 40px;
+        padding: 0px 80px;
+        }
 }
 
 .mainvisual__p {
     font-size: 48px;
+    @include mediaQuery(tab){
+      font-size: 30px;
+      }
 }
 
 // works
@@ -749,6 +756,9 @@ html{
 
     .list__content--text {
         margin-top: 8px;
+        @include mediaQuery(sp){
+            margin-bottom: 10px;
+          }
     }
 
     .pic-container {
@@ -893,4 +903,27 @@ html{
         background-color: $maincolor;
         color: $basecolor;
         transition: 0.7s;
+    }
+
+    // contactページ
+    #contact__page{
+        text-align: center;
+        max-width: 1080px;
+        margin: auto;
+        padding-top: 200px;
+
+    }
+    .contact__wapper{
+        margin: 0px 50px;
+    }
+
+    .contact__container {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+        /* margin-bottom: 16px; */
+    }
+    .contact__form--label {
+        margin-bottom: 16px;
     }

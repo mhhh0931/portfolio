@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>Hm.code</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Portfolio-site" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Portfolio.html">
+    <link rel="stylesheet" href="..\reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="..\css\portfolio.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__content">
+
+            <h1 class="logo-title">
+                Hm.code
+            </h1>
+
+            <div class="hamburger">
+                <span></span> 
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="navigation">
+                <ul class="navigation__list">
+                    <li  class="navigation__item"><a href="..\portfolio.html">Home</a></li>
+                    <li  class="navigation__item"><a href="works.html">Works</a></li>
+                    <li  class="navigation__item"><a href="..\portfolio.html">Service</a></li>
+                    <li  class="navigation__item"><a href="price.html">Price</a></li>
+                    <li  class="navigation__item"><a href="#">Contact</a></li>
+                    <li><a href="#"><img src="..\img\icons8-インスタグラム-48 (2) 1.png" alt=""></a></li>
+                    <li><a href="#"><img src="..\img\icons8-github-24.png" alt=""></a></li>
+                </ul>
+            </nav>
+            <nav class="hamburger__navigation">
+                <ul class="hamburger__navigation--list">
+                    <li  class="hamburger__navigation--item"><a href="">Home</a></li>
+                    <li  class="hamburger__navigation--item"><a href="#">Works</a></li>
+                    <li  class="hamburger__navigation--item"><a href="#">Service</a></li>
+                    <li  class="hamburger__navigation--item"><a href="#">Price</a></li>
+                    <li  class="hamburger__navigation--item"><a href="#">Contact</a></li>
+                    <li><a href="#"><img src="..\img\icons8-インスタグラム-48 (2) 1.png" alt=""></a></li>
+                    <li><a href="#"><img src="..\img\icons8-github-24.png" alt=""></a></li>
+                </ul>
+            </nav>
+        </div>
+
+         
+    </header>
+<main>
+    <section id="contact__page">
+        <div class="contact__wapper">
+        <h2 class="contact__title">Contact</h2>
+        <p class="contact__subtitle">-お問い合わせ-</p>
+
+        <form action="" method="POST">
+            <div class="contact__container">
+              <label for="name" class="contact__form--label">お名前</label>
+              <input type="text" class="contact__form--control" id="name" name="name" required>
+            </div>
+      
+            <div class="contact__container">
+              <label for="email" class="contact__form--label">メールアドレス</label>
+              <input type="email" class="contact__form--control" id="email" name="email" required>
+            </div>
+      
+            <div class="contact__container">
+              <label for="message" class="contact__form--label">お問い合わせ内容</label>
+              <textarea class="contact__form--control" id="message" name="message" ></textarea>
+            </div>
+      
+            <button type="submit" class="contact__button">送信</button>
+          </form>
+
+        
+        </div>
+    </section>
+    <footer class="footer">    
+        <h2 class="footer__copyright">&copy;Hm code</h2>
+    </footer>
+
+
+</main>
+
+<script src="..\js\price.js"></script>
+</body>

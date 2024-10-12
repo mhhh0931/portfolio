@@ -146,6 +146,7 @@ html {
 
 .mainvisual__item img {
   width: 100%;
+  margin-top: 80px;
 }
 
 .mainvisual__text {
@@ -158,13 +159,24 @@ html {
   font-size: 40px;
   color: #558A86;
   font-weight: bold;
-  padding: 30px 100px;
+  padding: 20px 80px;
   text-align: center;
   line-height: 1.5;
+}
+@media screen and (max-width: 767px) {
+  .mainvisual__text {
+    font-size: 40px;
+    padding: 0px 80px;
+  }
 }
 
 .mainvisual__p {
   font-size: 48px;
+}
+@media screen and (max-width: 767px) {
+  .mainvisual__p {
+    font-size: 30px;
+  }
 }
 
 #works {
@@ -386,7 +398,9 @@ html {
 @media screen and (max-width: 767px) {
   .about__list {
     flex-direction: column;
-    margin: 0px 20px;
+    padding: 40px 60px;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -495,7 +509,7 @@ html {
   text-align: center;
   max-width: 1080px;
   margin: auto;
-  padding-top: 120px;
+  padding-top: 200px;
 }
 
 .price__title {
@@ -524,7 +538,7 @@ html {
 }
 @media screen and (max-width: 980px) {
   .price__item--content {
-    margin: 0px 150px;
+    margin: 0px 50px;
     flex-direction: column;
     margin-bottom: 40px;
   }
@@ -621,7 +635,7 @@ html {
 }
 
 .flow__list {
-  margin: 0px 120px;
+  margin: 0px 50px;
   display: flex;
   align-items: center;
   margin-bottom: 56px;
@@ -676,7 +690,7 @@ html {
   text-align: center;
   max-width: 1080px;
   margin: auto;
-  padding-top: 120px;
+  padding-top: 200px;
 }
 
 .list__title {
@@ -698,6 +712,18 @@ html {
   grid-column-gap: 16px;
   grid-row-gap: 16px;
 }
+@media screen and (max-width: 767px) {
+  .list__content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 0px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .list__content {
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 0px;
+  }
+}
 
 .list__content--item:hover {
   opacity: 0.8;
@@ -706,6 +732,11 @@ html {
 
 .list__content--text {
   margin-top: 8px;
+}
+@media screen and (max-width: 600px) {
+  .list__content--text {
+    margin-bottom: 10px;
+  }
 }
 
 .pic-container {
@@ -768,7 +799,7 @@ html {
   text-align: center;
   max-width: 1080px;
   margin: auto;
-  padding-top: 120px;
+  padding-top: 200px;
 }
 
 .detail__title {
@@ -848,4 +879,27 @@ html {
   background-color: #558A86;
   color: #fbfbfb;
   transition: 0.7s;
+}
+
+#contact__page {
+  text-align: center;
+  max-width: 1080px;
+  margin: auto;
+  padding-top: 200px;
+}
+
+.contact__wapper {
+  margin: 0px 50px;
+}
+
+.contact__container {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  /* margin-bottom: 16px; */
+}
+
+.contact__form--label {
+  margin-bottom: 16px;
 }/*# sourceMappingURL=portfolio.css.map */
