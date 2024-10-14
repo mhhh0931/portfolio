@@ -99,29 +99,11 @@ links.forEach((link) =>{
   });
 });
 
-// DOMが読み込まれた後に実行
-document.addEventListener('DOMContentLoaded', () => {
-
-    // 問い合わせのformタグを取得
-    const contact_form = document.getElementById("contact__form");
-  
-    // formタグを取得できた時
-    if (contact_form !== null) {
-  
-      // submitイベントが発覚した時
-      contact_form.addEventListener("submit", event => {
-  
-        // submitイベントを停止する
-        event.preventDefault();
-  
-        // 送信ボタンを取得して「disabled」を有効にする
-        const submit_button = document.getElementById("submit__button");
-        submit_button.disabled = true;
-  
-        // 改めてsubmitする
-        contact_form.submit();
-  
-      })
-  
-    }
-  })
+document.getElementById('contact__form').onsubmit = function (event) {
+    // 再読み込み防止
+    event.preventDefault();
+    // 入力フォームの内容を取得
+    const inputForm = document.getElementById('contact__form').content.value;
+    // 入力内容を画面に出力
+    document.getElementById('output').textContent = `${inputForm}`;
+}
