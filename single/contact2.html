@@ -6,6 +6,7 @@
     <meta name="description" content="Portfolio-site" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Portfolio.html">
+    <meta name="robots" content="noindex">
     <link rel="stylesheet" href="..\reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet">
@@ -53,26 +54,23 @@
 <main>
     <section id="contact__page">
         <div class="contact__wapper">
-        <h2 class="contact__title">Contact</h2>
-        <p class="contact__subtitle">-お問い合わせ-</p>
+        　　<h2 class="contact__title">Contact</h2>
+        　　<p class="contact__subtitle">-入力内容確認-</p>
 
-        <form 　class="contact__form" action="single\contact2.html"  method="POST">
+        <form class="contact__form" action="single\thanks.html" method="post" id="contact_form">
             <div class="contact__container">
-              <label for="name" class="contact__form--label">お名前</label>
-              <input type="text" class="contact__form--control"  id="name" required>
+              <label for="name" class="contact__form--label">ラベル名</label>
+              <p>入力された値</p>
             </div>
       
-            <div class="contact__container">
-              <label for="email" class="contact__form--label">メールアドレス</label>
-              <input type="email" class="contact__form--control" id="email" required>
-            </div>
-      
-            <div class="contact__container">
-              <label for="message" class="contact__form--label">お問い合わせ内容</label>
-              <textarea class="contact__form--control"  id="message" ></textarea>
-            </div>
-      
-            <button type="submit" class="contact__button">入力内容確認</button>
+            
+      　　　<div class="contact__button--check">
+
+         　　　　<div class="contact__button">
+            　　　　<a href="">修正</a>
+         　　　　</div>
+          　　　　<button type="submit" class="contact__button">送信</button>
+        　　　</div>
           </form>
 
         

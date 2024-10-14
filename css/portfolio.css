@@ -889,7 +889,12 @@ html {
 }
 
 .contact__wapper {
-  margin: 0px 50px;
+  margin: 0px 150px;
+}
+@media screen and (max-width: 767px) {
+  .contact__wapper {
+    margin: 0px 100px;
+  }
 }
 
 .contact__container {
@@ -901,5 +906,26 @@ html {
 }
 
 .contact__form--label {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.contact__form--label::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 3px;
+  height: 16px;
+  background-color: #558A86;
+  left: -10px;
+}
+
+.contact__form--control {
+  border: 2px solid #558A86;
   margin-bottom: 16px;
+  padding: 10px;
+}
+
+textarea#contact__form--control {
+  height: 80px;
 }/*# sourceMappingURL=portfolio.css.map */
